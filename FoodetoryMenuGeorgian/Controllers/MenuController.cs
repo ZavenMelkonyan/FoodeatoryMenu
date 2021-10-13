@@ -13,5 +13,10 @@ namespace FoodetoryMenuGeorgian.Controllers
         {
             return View();
         }
+        [Route("/Menu_arm")]
+        public IActionResult IndexArm()
+        {
+            return View("index_arm");
+        }
     }
 }

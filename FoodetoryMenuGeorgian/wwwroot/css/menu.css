@@ -11,7 +11,46 @@
     display: table;
     clear: both;
 }
-img {
+
+.image {
     width: 100%;
     height: auto;
+}
+button {
+    display: inline-block;
+    height: 134px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 104px;
+}
+
+#close-image img {
+    display: block;
+    height: 130px;
+    width: 100px;
+}
+#btn {
+    display: block;
+    position: fixed;
+    right: 2.1em;
+    top: 50%;
+    z-index: 100001;
+    width: 90px;
+    height: 60px;
+    margin: -45px -30px -45px;
+    padding: 0;
+    cursor: pointer;
+}
+#btn_arm {
+    display: block;
+    position: fixed;
+    right: 2.1em;
+    top: 57%;
+    z-index: 100001;
+    width: 90px;
+    height: 60px;
+    margin: -45px -30px -45px;
+    padding: 0;
+    cursor: pointer;
 }
