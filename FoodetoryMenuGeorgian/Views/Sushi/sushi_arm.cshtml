@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+@{
+    <a href="@Url.Action("Sushi","Sushi")">
+        <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("SushiArm","Sushi")">
+        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("SushiRus","Sushi")">
+        <img id="btn_rus" class="btn" src="/Resources/Flag-Russia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("IndexArm","Sushi")">
+        <img id="btn_back" class="btn" src="/Resources/1024px-Back_Arrow.svg.png" height="90" width="90" alt="clear" />
+    </a>
+    <div class="row">
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <h1>Թունա-սուշի  550</h1>
+                    <img class="image" src="/Resources/Sushi/32 Սուշի թունա.jpg" alt="1">
+                    <h1>Ունագի-սուշի  750</h1>
+                    <img class="image" src="/Resources/Sushi/35 Սուշի ունագի.jpg" alt="1">
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <h1>Սաղմոն-սուշի  750</h1>
+                    <img class="image" src="/Resources/Sushi/33 Սուշի սաղմոն.jpg" alt="1">
+                    <h1>Ծովախեցգետին-սուշի  650</h1>
+                    <img class="image" src="/Resources/Sushi/36 Սուշի ծովախեցգետնով.jpg" alt="1">
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <h1>Ավոկադո-սուշի  250</h1>
+                    <img class="image" src="/Resources/Sushi/34 Սուշի ավոկադո.jpg" alt="1">
+                </li>
+            </ul>
+        </div>
+    </div>
+}

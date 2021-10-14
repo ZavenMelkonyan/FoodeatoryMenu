@@ -7,6 +7,9 @@ namespace FoodetoryMenuGeorgian.Models
 {
     public class SushiViewModel
     {
-        public string Url { get; set; }
+        public string NameAndPrice { get; set; }
+        public string Src { get; set; }
+        public string Description { get; set; }
+        public string MenuName { get; set; }
     }
 }

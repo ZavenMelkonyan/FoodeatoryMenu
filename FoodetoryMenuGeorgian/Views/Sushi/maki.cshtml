@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+﻿@model FoodetoryMenuGeorgian.Models.SushiViewModel
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -26,8 +27,10 @@
         <div class="column">
             <ul style="list-style: none;">
                 <li>
-                    <h1>Vegan Maki  200</h1>
-                    <img class="image" src="/Resources/Sushi/1.Մակի վեգան.jpg" alt="1">
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Vegan Maki  200", Src = "/Resources/Sushi/1.Մակի վեգան.jpg", MenuName = "Maki" })">
+                        <h1>Vegan Maki  200</h1>
+                        <img class="image" src="/Resources/Sushi/1.Մակի վեգան.jpg" alt="1">
+                    </a>
                     <h1>Avocado Maki  300</h1>
                     <img class="image" src="/Resources/Sushi/4.Մակի ավոկադո.jpg" alt="1">
                     <h1>Chukka Maki  250</h1>

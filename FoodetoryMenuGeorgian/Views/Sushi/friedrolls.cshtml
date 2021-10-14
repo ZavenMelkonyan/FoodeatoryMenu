@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+@{
+    <a href="@Url.Action("FriedRolls","Sushi")">
+        <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("FriedRollsArm","Sushi")">
+        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("FriedRollsRus","Sushi")">
+        <img id="btn_rus" class="btn" src="/Resources/Flag-Russia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("Index","Sushi")">
+        <img id="btn_back" class="btn" src="/Resources/1024px-Back_Arrow.svg.png" height="90" width="90" alt="clear" />
+    </a>
+    <div class="row">
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <h1>Ebi Tempura  2100</h1>
+                    <img class="image" src="/Resources/Sushi/28 տապակած ռոլլ էբի տեմպուրա.png" alt="1">
+                    <h1>Unagi Tempura  3600</h1>
+                    <img class="image" src="/Resources/Sushi/31 տապակած ռոլլ Ունագի տեմպուրա.png" alt="1">
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <h1>Salmon Tempura  3000</h1>
+                    <img class="image" src="/Resources/Sushi/29 տապակած ռոլլ սաղմոն տեմպուրա.png" alt="1">
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <h1>Vegan Tempura  1400</h1>
+                    <img class="image" src="/Resources/Sushi/30 տապակած ռոլլ վեգան տեմպուրա.png" alt="1">
+                </li>
+            </ul>
+        </div>
+    </div>
+}

@@ -44,5 +44,65 @@ namespace FoodetoryMenuGeorgian.Controllers
         {
             return View("maki_rus");
         }
+        public IActionResult Rolls()
+        {
+            return View("rolls");
+        }
+        public IActionResult RollsArm()
+        {
+            return View("rolls_arm");
+        }
+        public IActionResult RollsRus()
+        {
+            return View("rolls_rus");
+        }
+        public IActionResult HotRolls()
+        {
+            return View("hotrolls");
+        }
+        public IActionResult HotRollsArm()
+        {
+            return View("hotrolls_arm");
+        }
+        public IActionResult HotRollsRus()
+        {
+            return View("hotrolls_rus");
+        }
+        public IActionResult FriedRolls()
+        {
+            return View("friedrolls");
+        }
+        public IActionResult FriedRollsArm()
+        {
+            return View("friedrolls_arm");
+        }
+        public IActionResult FriedRollsRus()
+        {
+            return View("friedrolls_rus");
+        }
+        public IActionResult Sushi()
+        {
+            return View("sushi");
+        }
+        public IActionResult SushiArm()
+        {
+            return View("sushi_arm");
+        }
+        public IActionResult SushiRus()
+        {
+            return View("sushi_rus");
+        }
+        public IActionResult Gunkan()
+        {
+            return View("gunkan");
+        }
+        public IActionResult GunkanArm()
+        {
+            return View("gunkan_arm");
+        }
+        public IActionResult GunkanRus()
+        {
+            return View("gunkan_rus");
+        }
     }
 }

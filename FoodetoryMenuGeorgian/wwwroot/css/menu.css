@@ -12,6 +12,17 @@
     clear: both;
 }
 
+.column_item {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row_item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 .image {
     width: 100%;
     height: auto;
