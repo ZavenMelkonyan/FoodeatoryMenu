@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="/css/menu.css">
 </head>
 @{
+    <img id="contol" class="btn_control" src="~/Resources/flag-of-armenia.jpg" />
     <a href="@Url.Action("FriedRolls","Sushi")">
         <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
     </a>
-    <a href="@Url.Action("FriedRollsArm","Sushi")">
-        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
-    </a>
     <a href="@Url.Action("FriedRollsRus","Sushi")">
         <img id="btn_rus" class="btn" src="/Resources/Flag-Russia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("FriedRollsArm","Sushi")">
+        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
     </a>
     <a href="@Url.Action("IndexArm","Sushi")">
         <img id="btn_back" class="btn" src="/Resources/1024px-Back_Arrow.svg.png" height="90" width="90" alt="clear" />
@@ -26,26 +27,34 @@
         <div class="column">
             <ul style="list-style: none;">
                 <li>
-                    <h1>Էբի Տեմպուրա  2100</h1>
-                    <img class="image" src="/Resources/Sushi/28 տապակած ռոլլ էբի տեմպուրա.png" alt="1">
-                    <h1>Ունագի Տեմպուրա  3600</h1>
-                    <img class="image" src="/Resources/Sushi/31 տապակած ռոլլ Ունագի տեմպուրա.png" alt="1">
+                    <a href="@Url.Action("IndexArm","SushiItems",new SushiViewModel { NameAndPrice = "Էբի Տեմպուրա  2100", Src = "/Resources/Sushi/28 տապակած ռոլլ էբի տեմպուրա.png", MenuName = "FriedRollsArm" })">
+                        <h1>Էբի Տեմպուրա  2100</h1>
+                        <img class="image" src="/Resources/Sushi/28 տապակած ռոլլ էբի տեմպուրա.png" alt="1">
+                    </a>
+                    <a href="@Url.Action("IndexArm","SushiItems",new SushiViewModel { NameAndPrice = "Ունագի Տեմպուրա  3600", Src = "/Resources/Sushi/31 տապակած ռոլլ Ունագի տեմպուրա.png", MenuName = "FriedRollsArm" })">
+                        <h1>Ունագի Տեմպուրա  3600</h1>
+                        <img class="image" src="/Resources/Sushi/31 տապակած ռոլլ Ունագի տեմպուրա.png" alt="1">
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="column">
             <ul style="list-style: none;">
                 <li>
-                    <h1>Սաղմոնով Տեմպուրա  3000</h1>
-                    <img class="image" src="/Resources/Sushi/29 տապակած ռոլլ սաղմոն տեմպուրա.png" alt="1">
+                    <a href="@Url.Action("IndexArm","SushiItems",new SushiViewModel { NameAndPrice = "Սաղմոնով Տեմպուրա  3000", Src = "/Resources/Sushi/29 տապակած ռոլլ սաղմոն տեմպուրա.png", MenuName = "FriedRollsArm" })">
+                        <h1>Սաղմոնով Տեմպուրա  3000</h1>
+                        <img class="image" src="/Resources/Sushi/29 տապակած ռոլլ սաղմոն տեմպուրա.png" alt="1">
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="column">
             <ul style="list-style: none;">
                 <li>
-                    <h1>Վեգան Տեմպուրա  1400</h1>
-                    <img class="image" src="/Resources/Sushi/30 տապակած ռոլլ վեգան տեմպուրա.png" alt="1">
+                    <a href="@Url.Action("IndexArm","SushiItems",new SushiViewModel { NameAndPrice = "Վեգան Տեմպուրա  1400", Src = "/Resources/Sushi/30 տապակած ռոլլ վեգան տեմպուրա.png", MenuName = "FriedRollsArm" })">
+                        <h1>Վեգան Տեմպուրա  1400</h1>
+                        <img class="image" src="/Resources/Sushi/30 տապակած ռոլլ վեգան տեմպուրա.png" alt="1">
+                    </a>
                 </li>
             </ul>
         </div>

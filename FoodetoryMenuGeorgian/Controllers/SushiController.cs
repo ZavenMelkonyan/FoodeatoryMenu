@@ -104,5 +104,17 @@ namespace FoodetoryMenuGeorgian.Controllers
         {
             return View("gunkan_rus");
         }
+        public IActionResult Temaki()
+        {
+            return View("temaki");
+        }
+        public IActionResult TemakiArm()
+        {
+            return View("temaki_arm");
+        }
+        public IActionResult TemakiRus()
+        {
+            return View("temaki_rus");
+        }
     }
 }

@@ -11,7 +11,6 @@
     display: table;
     clear: both;
 }
-
 .column_item {
     float: left;
     width: 50%;
@@ -42,40 +41,40 @@ button {
     width: 100px;
 }
 #btn {
-    display: block;
-    position: fixed;
-    right: 2.1em;
-    top: 47%;
+    display: inline;
+    right: 20vh;
+    top: 5%;
     z-index: 100001;
-    width: 90px;
-    height: 60px;
-    margin: -45px -30px -45px;
+    width: 4.5vh;
+    height: 3vh;
+    margin: 0px 5px 0px;
     padding: 0;
     cursor: pointer;
+    float: right;
 }
 #btn_arm {
-    display: block;
-    position: fixed;
-    right: 2.1em;
-    top: 55%;
+    display: inline;
+    right: 15vh;
+    top: 5%;
     z-index: 100001;
-    width: 90px;
-    height: 60px;
-    margin: -45px -30px -45px;
+    width: 4.5vh;
+    height: 3vh;
+    margin: 0px 5px 0px;
     padding: 0;
     cursor: pointer;
+    float: right;
 }
 #btn_rus {
-    display: block;
-    position: fixed;
-    right: 2.1em;
-    top: 63%;
+    display: inline;
+    right: 10vh;
+    top: 5%;
     z-index: 100001;
-    width: 90px;
-    height: 60px;
-    margin: -45px -30px -45px;
+    width: 4.5vh;
+    height: 3vh;
+    margin: 0px 5px 0px;
     padding: 0;
     cursor: pointer;
+    float: right;
 }
 #btn_back {
     display: block;
@@ -88,4 +87,16 @@ button {
     margin: -30px -30px -45px;
     padding: 0;
     cursor: pointer;
+}
+#contol {
+    display: inline;
+    right: 10vh;
+    top: 5%;
+    z-index: 100001;
+    width: 4.5vh;
+    height: 3vh;
+    margin: 0px 0px 0px;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
 }

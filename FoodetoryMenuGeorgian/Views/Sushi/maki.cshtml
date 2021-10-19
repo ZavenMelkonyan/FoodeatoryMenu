@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="/css/menu.css">
 </head>
 @{
+    <img id="contol" class="btn_control" src="~/Resources/flag-of-armenia.jpg" />
     <a href="@Url.Action("Maki","Sushi")">
         <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
     </a>
-    <a href="@Url.Action("MakiArm","Sushi")">
-        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
-    </a>
     <a href="@Url.Action("MakiRus","Sushi")">
         <img id="btn_rus" class="btn" src="/Resources/Flag-Russia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("MakiArm","Sushi")">
+        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
     </a>
     <a href="@Url.Action("Index","Sushi")">
         <img id="btn_back" class="btn" src="/Resources/1024px-Back_Arrow.svg.png" height="90" width="90" alt="clear" />
@@ -31,34 +32,50 @@
                         <h1>Vegan Maki  200</h1>
                         <img class="image" src="/Resources/Sushi/1.Մակի վեգան.jpg" alt="1">
                     </a>
-                    <h1>Avocado Maki  300</h1>
-                    <img class="image" src="/Resources/Sushi/4.Մակի ավոկադո.jpg" alt="1">
-                    <h1>Chukka Maki  250</h1>
-                    <img class="image" src="/Resources/Sushi/7.Մակի չուկա.jpg" alt="1">
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Avocado Maki  300", Src = "/Resources/Sushi/4.Մակի ավոկադո.jpg", MenuName = "Maki" })">
+                        <h1>Avocado Maki  300</h1>
+                        <img class="image" src="/Resources/Sushi/4.Մակի ավոկադո.jpg" alt="1">
+                    </a>
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Chukka Maki  250", Src = "/Resources/Sushi/7.Մակի չուկա.jpg", MenuName = "Maki" })">
+                        <h1>Chukka Maki  250</h1>
+                        <img class="image" src="/Resources/Sushi/7.Մակի չուկա.jpg" alt="1">
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="column">
             <ul style="list-style: none;">
                 <li>
-                    <h1>Salmon Maki  450</h1>
-                    <img class="image" src="/Resources/Sushi/2.Մակի սաղմոն.jpg" alt="1">
-                    <h1>Kappa Maki  150</h1>
-                    <img class="image" src="/Resources/Sushi/5.Մակի կապպա  .jpg" alt="1">
-                    <h1>Ebi Maki  400</h1>
-                    <img class="image" src="/Resources/Sushi/8.Մակի էբի.jpg" alt="1">
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Salmon Maki  450", Src = "/Resources/Sushi/2.Մակի սաղմոն.jpg", MenuName = "Maki" })">
+                        <h1>Salmon Maki  450</h1>
+                        <img class="image" src="/Resources/Sushi/2.Մակի սաղմոն.jpg" alt="1">
+                    </a>
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Kappa Maki  150", Src = "/Resources/Sushi/5.Մակի կապպա  .jpg", MenuName = "Maki" })">
+                        <h1>Kappa Maki  150</h1>
+                        <img class="image" src="/Resources/Sushi/5.Մակի կապպա  .jpg" alt="1">
+                    </a>
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Ebi Maki  400", Src = "/Resources/Sushi/8.Մակի էբի.jpg", MenuName = "Maki" })">
+                        <h1>Ebi Maki  400</h1>
+                        <img class="image" src="/Resources/Sushi/8.Մակի էբի.jpg" alt="1">
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="column">
             <ul style="list-style: none;">
                 <li>
-                    <h1>Smoked salmon Maki  450</h1>
-                    <img class="image" src="/Resources/Sushi/3.մակի ապխտած սաղմոնով.jpg" alt="1">
-                    <h1>Unagi Maki  650</h1>
-                    <img class="image" src="/Resources/Sushi/6. Մակի ունագի.jpg" alt="1">
-                    <h1>Tuna Maki  450</h1>
-                    <img class="image" src="/Resources/Sushi/9.Մակի թունա .jpg" alt="1">
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Smoked salmon Maki  450", Src = "/Resources/Sushi/3.մակի ապխտած սաղմոնով.jpg", MenuName = "Maki" })">
+                        <h1>Smoked salmon Maki  450</h1>
+                        <img class="image" src="/Resources/Sushi/3.մակի ապխտած սաղմոնով.jpg" alt="1">
+                    </a>
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Unagi Maki  650", Src = "/Resources/Sushi/6. Մակի ունագի.jpg", MenuName = "Maki" })">
+                        <h1>Unagi Maki  650</h1>
+                        <img class="image" src="/Resources/Sushi/6. Մակի ունագի.jpg" alt="1">
+                    </a>
+                    <a href="@Url.Action("Index","SushiItems",new SushiViewModel { NameAndPrice = "Tuna Maki  450", Src = "/Resources/Sushi/9.Մակի թունա .jpg", MenuName = "Maki" })">
+                        <h1>Tuna Maki  450</h1>
+                        <img class="image" src="/Resources/Sushi/9.Մակի թունա .jpg" alt="1">
+                    </a>
                 </li>
             </ul>
         </div>
