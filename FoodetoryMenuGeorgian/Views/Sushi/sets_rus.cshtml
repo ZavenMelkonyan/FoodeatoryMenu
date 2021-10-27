@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+@{
+    <img id="contol" class="btn_control" src="~/Resources/flag-of-armenia.jpg" />
+    <a href="@Url.Action("Sets","Sushi")">
+        <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("SetsRus","Sushi")">
+        <img id="btn_rus" class="btn" src="/Resources/Flag-Russia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("SetsArm","Sushi")">
+        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("IndexRus","Sushi")">
+        <img id="btn_back" class="btn" src="/Resources/1024px-Back_Arrow.svg.png" height="90" width="90" alt="clear" />
+    </a>
+    <div class="row">
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <a href="@Url.Action("IndexRus","SushiItems",new SushiViewModel { NameAndPrice = "Сет один  6200", Src = "/Resources/no_image.jpg", MenuName = "SetsRus" })">
+                        <h1>Сет 1 - Сет с лососем - 40 шт.  6200</h1>
+                        <img class="image" src="/Resources/no_image.jpg" alt="1">
+                    </a>
+                    <a href="@Url.Action("IndexRus","SushiItems",new SushiViewModel { NameAndPrice = "Сет четыре  16000", Src = "/Resources/no_image.jpg", MenuName = "SetsRus" })">
+                        <h1>Сет 4 - Большой Сет - 80 шт.  16000</h1>
+                        <img class="image" src="/Resources/no_image.jpg" alt="1">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <a href="@Url.Action("IndexRus","SushiItems",new SushiViewModel { NameAndPrice = "Сет два  7000", Src = "/Resources/no_image.jpg", MenuName = "SetsRus" })">
+                        <h1>Сет 2 - Сет горячих роллов - 33 шт.  7000</h1>
+                        <img class="image" src="/Resources/no_image.jpg" alt="1">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    <a href="@Url.Action("IndexRus","SushiItems",new SushiViewModel { NameAndPrice = "Сет три  6000", Src = "/Resources/no_image.jpg", MenuName = "SetsRus" })">
+                        <h1>Сет 3 - Сет Маки - 50 штук  6000</h1>
+                        <img class="image" src="/Resources/no_image.jpg" alt="1">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+}

@@ -116,5 +116,77 @@ namespace FoodetoryMenuGeorgian.Controllers
         {
             return View("temaki_rus");
         }
+        public IActionResult Sashimi()
+        {
+            return View("sashimi");
+        }
+        public IActionResult SashimiArm()
+        {
+            return View("sashimi_arm");
+        }
+        public IActionResult SashimiRus()
+        {
+            return View("sashimi_rus");
+        }
+        public IActionResult Other()
+        {
+            return View("other");
+        }
+        public IActionResult OtherArm()
+        {
+            return View("other_arm");
+        }
+        public IActionResult OtherRus()
+        {
+            return View("other_rus");
+        }
+        public IActionResult Salads()
+        {
+            return View("salads");
+        }
+        public IActionResult SaladsArm()
+        {
+            return View("salads_arm");
+        }
+        public IActionResult SaladsRus()
+        {
+            return View("salads_rus");
+        }
+        public IActionResult Soups()
+        {
+            return View("soups");
+        }
+        public IActionResult SoupsArm()
+        {
+            return View("soups_arm");
+        }
+        public IActionResult SoupsRus()
+        {
+            return View("soups_rus");
+        }
+        public IActionResult Wok()
+        {
+            return View("wok");
+        }
+        public IActionResult WokArm()
+        {
+            return View("wok_arm");
+        }
+        public IActionResult WokRus()
+        {
+            return View("wok_rus");
+        }
+        public IActionResult Sets()
+        {
+            return View("sets");
+        }
+        public IActionResult SetsArm()
+        {
+            return View("sets_arm");
+        }
+        public IActionResult SetsRus()
+        {
+            return View("sets_rus");
+        }
     }
 }

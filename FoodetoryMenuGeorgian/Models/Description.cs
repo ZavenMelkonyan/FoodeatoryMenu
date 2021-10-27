@@ -86,10 +86,11 @@ namespace FoodetoryMenuGeorgian.Models
             descriptions.Add("Mushroom wok with Udon", "honey mushrooms, oyster mushrooms, mushrooms, broccoli, bell pepper, pumpkin");
             descriptions.Add("Mushroom wok with rice", "honey mushrooms, oyster mushrooms, champignons, broccoli, Japanese rice");
             descriptions.Add("Mushroom wok with funchoza", "honey mushrooms, oyster mushrooms, champignons, broccoli, pumpkin, bell pepper");
-            descriptions.Add("Set 1 – Salmon Set – 40 pieces", "0");
-            descriptions.Add("Set 2 – Hot rolls set – 33 pieces", "0");
-            descriptions.Add("Set 3 – Maki Set – 50 pieces", "0");
-            descriptions.Add("Set 4 – Big Set – 80 pieces", "0"); 
+            descriptions.Add("Set one", "•  Salmon Maki •  Sashimi Maki • Salmon - sushi • Salmon Gunkan • Kappa Maki • Philadelphia classic");
+            descriptions.Add("Set two", "• Eels Temaki • Caesar roll • Beef Yaki • Eels Gunkan • Tuna Sashimi");
+            descriptions.Add("Set three", "• Salmon Maki • Avocado Maki • Kappa Maki • Salmon Maki • Eels Maki • Chuka Maki");
+            descriptions.Add("Set four", "• Ebi California • Canada • Philadelphia classic • California • Caesar roll • Tuna Maki • Kappa Maki • Unagi Maki • Avocado Maki • Caviar Maki" +
+                "• Avocado - sushi • Salmon - sushi • Tuna - sushi •Eels sushi • Shrimps - sushi"); 
 
 
         }

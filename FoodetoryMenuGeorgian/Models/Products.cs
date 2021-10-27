@@ -86,10 +86,10 @@ namespace FoodetoryMenuGeorgian.Models
             products.Add(new Tuple<string, string, string>("Mushroom wok with Udon", "Սնկով վոկ Ուդոն", "Вок грибной с Удоном"));
             products.Add(new Tuple<string, string, string>("Mushroom wok with rice", "Սնկով վոկ բրնձով", "Вок грибной с рисом"));
             products.Add(new Tuple<string, string, string>("Mushroom wok with funchoza", "Սնկով վոկ ֆունչոզա", "Вок грибной с фунчозой"));
-            products.Add(new Tuple<string, string, string>("Set 1 – Salmon Set – 40 pieces", "Սեթ 1 – Սաղմոնի սեթ– 40 հատ", "Сет 1 - Сет с лососем - 40 шт."));
-            products.Add(new Tuple<string, string, string>("Set 2 – Hot rolls set – 33 pieces", "Սեթ 2 – Տաք ռոլլի սեթ – 33 հատ", "Сет 2 - Сет горячих роллов - 33 шт."));
-            products.Add(new Tuple<string, string, string>("Set 3 – Maki Set – 50 pieces", "Սեթ 3 – Սեթ Մակի – 50 հատ", "Сет 3 - Сет Маки - 50 штук"));
-            products.Add(new Tuple<string, string, string>("Set 4 – Big Set – 80 pieces", "Սեթ 4 – Սեթ Բիգ – 80 հատ", "Сет 4 - Большой Сет - 80 шт."));
+            products.Add(new Tuple<string, string, string>("Set one", "Սեթ մեկ", "Сет один"));
+            products.Add(new Tuple<string, string, string>("Set two", "Սեթ երկու", "Сет два"));
+            products.Add(new Tuple<string, string, string>("Set three", "Սեթ երեք", "Сет три"));
+            products.Add(new Tuple<string, string, string>("Set four", "Սեթ չորս", "Сет четыре"));
         }
     }
 }
