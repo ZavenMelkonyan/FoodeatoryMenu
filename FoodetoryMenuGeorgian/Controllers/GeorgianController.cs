@@ -3,45 +3,45 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FoodetoryMenuGeorgian.Models.Bar;
+using FoodetoryMenuGeorgian.Models.Georgian;
 
 namespace FoodetoryMenuGeorgian.Controllers
 {
-    public class BarController : Controller
+    public class GeorgianController : Controller
     {
-        [Route("/Bar")]
-        public IActionResult Bar()
+        [Route("/Georgian")]
+        public IActionResult Georgian()
         {
-            BarViewModel barViewModel = new BarViewModel() { categories = new Categories()};
-            return View("bar", barViewModel);
+            GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories()};
+            return View("georgian", barViewModel);
         }
-        [Route("/Bar_arm")]
-        public IActionResult BarArm()
+        [Route("/Georgian_arm")]
+        public IActionResult GeorgianArm()
         {
-            BarViewModel barViewModel = new BarViewModel() { categories = new Categories() };
-            return View("bar_arm", barViewModel);
+            GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories() };
+            return View("georgian_arm", barViewModel);
         }
-        [Route("/Bar_rus")]
-        public IActionResult BarRus()
+        [Route("/Georgian_rus")]
+        public IActionResult GeorgianRus()
         {
-            BarViewModel barViewModel = new BarViewModel() { categories = new Categories() };
-            return View("bar_rus", barViewModel);
+            GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories() };
+            return View("georgian_rus", barViewModel);
         }
-        public IActionResult Categorie(BarViewModel barViewModel)
+        public IActionResult Categorie(GeorgianViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
             return View("categorie", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
                                                                                    x.NameRus == barViewModel.categorieName).FirstOrDefault());
         }
-        public IActionResult CategorieArm(BarViewModel barViewModel)
+        public IActionResult CategorieArm(GeorgianViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
             return View("categorie_arm", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
                                                                                    x.NameRus == barViewModel.categorieName).FirstOrDefault());
         }
-        public IActionResult CategorieRus(BarViewModel barViewModel)
+        public IActionResult CategorieRus(GeorgianViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
             return View("categorie_rus", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
@@ -58,6 +58,11 @@ namespace FoodetoryMenuGeorgian.Controllers
                                                                            x.NameRus == sushiViewModel.MenuName).FirstOrDefault().Products.Where(x => x.Name == sushiViewModel.NameAndPrice ||
                                                                                                                                                    x.NameArm == sushiViewModel.NameAndPrice ||
                                                                                                                                                    x.NameRus == sushiViewModel.NameAndPrice).FirstOrDefault().Name;
+                sushiViewModel.Description = categories.categories.Where(x => x.Name == sushiViewModel.MenuName ||
+                                                                           x.NameArm == sushiViewModel.MenuName ||
+                                                                           x.NameRus == sushiViewModel.MenuName).FirstOrDefault().Products.Where(x => x.Description == sushiViewModel.Description ||
+                                                                                                                                                   x.DescriptionArm == sushiViewModel.Description ||
+                                                                                                                                                   x.DescriptionRus == sushiViewModel.Description).FirstOrDefault().Description;
             }
             if (sushiViewModel.Lang == "Arm")
             {
@@ -66,6 +71,12 @@ namespace FoodetoryMenuGeorgian.Controllers
                                                                            x.NameRus == sushiViewModel.MenuName).FirstOrDefault().Products.Where(x => x.Name == sushiViewModel.NameAndPrice ||
                                                                                                                                                    x.NameArm == sushiViewModel.NameAndPrice ||
                                                                                                                                                    x.NameRus == sushiViewModel.NameAndPrice).FirstOrDefault().NameArm;
+                sushiViewModel.Description = categories.categories.Where(x => x.Name == sushiViewModel.MenuName ||
+                                                           x.NameArm == sushiViewModel.MenuName ||
+                                                           x.NameRus == sushiViewModel.MenuName).FirstOrDefault().Products.Where(x => x.Description == sushiViewModel.Description ||
+                                                                                                                                   x.DescriptionArm == sushiViewModel.Description ||
+                                                                                                                                   x.DescriptionRus == sushiViewModel.Description).FirstOrDefault().DescriptionArm;
+
             }
             if (sushiViewModel.Lang == "Rus")
             {
@@ -74,8 +85,14 @@ namespace FoodetoryMenuGeorgian.Controllers
                                                                            x.NameRus == sushiViewModel.MenuName).FirstOrDefault().Products.Where(x => x.Name == sushiViewModel.NameAndPrice ||
                                                                                                                                                    x.NameArm == sushiViewModel.NameAndPrice ||
                                                                                                                                                    x.NameRus == sushiViewModel.NameAndPrice).FirstOrDefault().NameRus;
+                sushiViewModel.Description = categories.categories.Where(x => x.Name == sushiViewModel.MenuName ||
+                                                           x.NameArm == sushiViewModel.MenuName ||
+                                                           x.NameRus == sushiViewModel.MenuName).FirstOrDefault().Products.Where(x => x.Description == sushiViewModel.Description ||
+                                                                                                                                   x.DescriptionArm == sushiViewModel.Description ||
+                                                                                                                                   x.DescriptionRus == sushiViewModel.Description).FirstOrDefault().DescriptionRus;
+
             }
-            
+
             return View("product",sushiViewModel);
         }
         public IActionResult ProductArm(FoodetoryMenuGeorgian.Models.SushiViewModel sushiViewModel)

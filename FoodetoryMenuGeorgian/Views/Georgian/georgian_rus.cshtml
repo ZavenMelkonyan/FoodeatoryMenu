@@ -1,4 +1,4 @@
-﻿@model FoodetoryMenuGeorgian.Models.Bar.BarViewModel
+﻿@model FoodetoryMenuGeorgian.Models.Georgian.GeorgianViewModel
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,13 +12,13 @@
 </head>
 @{
     <img id="contol" class="btn_control" src="~/Resources/flag-of-armenia.jpg" />
-    <a href="@Url.Action("Bar","Bar")">
+    <a href="@Url.Action("Georgian","Georgian")">
         <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
     </a>
-    <a href="@Url.Action("BarRus","Bar")">
+    <a href="@Url.Action("GeorgianRus","Georgian")">
         <img id="btn_rus" class="btn" src="/Resources/Flag-Russia.jpg" height="60" width="90" alt="clear" />
     </a>
-    <a href="@Url.Action("BarArm","Bar")">
+    <a href="@Url.Action("GeorgianArm","Georgian")">
         <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
     </a>
     <div class="row">
@@ -27,9 +27,9 @@
                 <li>
                     @for (int i = 0; i < Model.categories.categories.Count; i += 3)
                     {
-                        Model.categorieName = Model.categories.categories[i].NameArm;
-                        <a href="@Url.Action("CategorieArm","Bar",Model)">
-                            <h1>@Model.categories.categories[i].NameArm</h1>
+                        Model.categorieName = Model.categories.categories[i].NameRus;
+                        <a href="@Url.Action("CategorieRus","Georgian",Model)">
+                            <h1>@Model.categories.categories[i].NameRus</h1>
                             <img class="image" src="@Model.categories.categories[i].Products[0].PicPath" alt="1">
                         </a>
                     }
@@ -41,9 +41,9 @@
                 <li>
                     @for (int i = 1; i < Model.categories.categories.Count; i += 3)
                     {
-                        Model.categorieName = Model.categories.categories[i].NameArm;
-                        <a href="@Url.Action("CategorieArm","Bar",Model)">
-                            <h1>@Model.categories.categories[i].NameArm</h1>
+                        Model.categorieName = Model.categories.categories[i].NameRus;
+                        <a href="@Url.Action("CategorieRus","Georgian",Model)">
+                            <h1>@Model.categories.categories[i].NameRus</h1>
                             <img class="image" src="@Model.categories.categories[i].Products[0].PicPath" alt="1">
                         </a>
                     }
@@ -55,9 +55,9 @@
                 <li>
                     @for (int i = 2; i < Model.categories.categories.Count; i += 3)
                     {
-                        Model.categorieName = Model.categories.categories[i].NameArm;
-                        <a href="@Url.Action("CategorieArm","Bar",Model)">
-                            <h1>@Model.categories.categories[i].NameArm</h1>
+                        Model.categorieName = Model.categories.categories[i].NameRus;
+                        <a href="@Url.Action("CategorieRus","Georgian",Model)">
+                            <h1>@Model.categories.categories[i].NameRus</h1>
                             <img class="image" src="@Model.categories.categories[i].Products[0].PicPath" alt="1">
                         </a>
                     }
