@@ -3,50 +3,50 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FoodetoryMenuGeorgian.Models.Georgian;
+using FoodetoryMenuGeorgian.Models.Italy;
 
 namespace FoodetoryMenuGeorgian.Controllers
 {
-    public class GeorgianController : Controller
+    public class ItalyController : Controller
     {
-        [Route("/Georgian")]
-        public IActionResult Georgian()
+        [Route("/Italy")]
+        public IActionResult Italy()
         {
-            GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories()};
-            return View("georgian", barViewModel);
+            ItalyViewModel italyViewModel = new ItalyViewModel() { categories = new Categories()};
+            return View("italy", italyViewModel);
         }
-        [Route("/Georgian_arm")]
-        public IActionResult GeorgianArm()
+        [Route("/Italy_arm")]
+        public IActionResult ItalyArm()
         {
-            GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories() };
-            return View("georgian_arm", barViewModel);
+            ItalyViewModel italyViewModel = new ItalyViewModel() { categories = new Categories() };
+            return View("italy_arm", italyViewModel);
         }
-        [Route("/Georgian_rus")]
-        public IActionResult GeorgianRus()
+        [Route("/Italy_rus")]
+        public IActionResult ItalyRus()
         {
-            GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories() };
-            return View("georgian_rus", barViewModel);
+            ItalyViewModel italyViewModel = new ItalyViewModel() { categories = new Categories() };
+            return View("italy_rus", italyViewModel);
         }
-        public IActionResult Categorie(GeorgianViewModel barViewModel)
+        public IActionResult Categorie(ItalyViewModel italyViewModel)
         {
-            barViewModel.categories = new Categories();
-            return View("categorie", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
-                                                                                   x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+            italyViewModel.categories = new Categories();
+            return View("categorie", italyViewModel.categories.categories.Where(x => x.Name == italyViewModel.categorieName ||
+                                                                                   x.NameArm == italyViewModel.categorieName ||
+                                                                                   x.NameRus == italyViewModel.categorieName).FirstOrDefault());
         }
-        public IActionResult CategorieArm(GeorgianViewModel barViewModel)
+        public IActionResult CategorieArm(ItalyViewModel italyViewModel)
         {
-            barViewModel.categories = new Categories();
-            return View("categorie_arm", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
-                                                                                   x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+            italyViewModel.categories = new Categories();
+            return View("categorie_arm", italyViewModel.categories.categories.Where(x => x.Name == italyViewModel.categorieName ||
+                                                                                   x.NameArm == italyViewModel.categorieName ||
+                                                                                   x.NameRus == italyViewModel.categorieName).FirstOrDefault());
         }
-        public IActionResult CategorieRus(GeorgianViewModel barViewModel)
+        public IActionResult CategorieRus(ItalyViewModel italyViewModel)
         {
-            barViewModel.categories = new Categories();
-            return View("categorie_rus", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
-                                                                                   x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+            italyViewModel.categories = new Categories();
+            return View("categorie_rus", italyViewModel.categories.categories.Where(x => x.Name == italyViewModel.categorieName ||
+                                                                                   x.NameArm == italyViewModel.categorieName ||
+                                                                                   x.NameRus == italyViewModel.categorieName).FirstOrDefault());
         }
         public IActionResult Product(FoodetoryMenuGeorgian.Models.SushiViewModel sushiViewModel)
         {

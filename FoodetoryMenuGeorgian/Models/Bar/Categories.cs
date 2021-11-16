@@ -14,7 +14,7 @@ namespace FoodetoryMenuGeorgian.Models.Bar
             List<Product> lemonade = new List<Product>();
             lemonade.Add(new Product { Name = "Mint, lime, cucumber", NameArm = "Նանա, լայմ և վարունգ", NameRus = "Мята, лайм, огурец", Price = "390", PicPath = "/Resources/Bar/mint lime cucumber lemonade.jpg" });
             lemonade.Add(new Product { Name = "Melissa, lime, raspberries", NameArm = "Մելիսա, լայմ և ազնվամորի", NameRus = "Мелисса, лайм, малина", Price = "450", PicPath = "/Resources/Bar/melissa, lime, raspberry lemonade.jpg" });
-            lemonade.Add(new Product { Name = "Tarragon and lime", NameArm = "Թարխուն և լայմ", NameRus = "Эстрагон и лайм", Price = "350", PicPath = "/Resources/Bar/no_image.jpg" });
+            lemonade.Add(new Product { Name = "Tarragon and lime", NameArm = "Թարխուն և լայմ", NameRus = "Эстрагон и лайм", Price = "350", PicPath = "/Resources/Bar/Tarragon and lime lemonade.jpg" });
             lemonade.Add(new Product { Name = "Basil, lime, berries", NameArm = "Ռեհան, լայմ և հատապտուղներ", NameRus = "Базилик, лайм, ягоды", Price = "450", PicPath = "/Resources/Bar/basil, lime, berries lemonade.jpg" });
             lemonade.Add(new Product { Name = "Basil and lime", NameArm = "Ռեհան և լայմ", NameRus = "Базилик и лайм", Price = "350", PicPath = "/Resources/Bar/basil and lime lemonade.jpg" });
             lemonade.Add(new Product { Name = "Melissa and lime", NameArm = "Մելիսա և լայմ", NameRus = "Мелисса и лайм", Price = "390", PicPath = "/Resources/Bar/melissa and lime lemonade.jpg" });
@@ -37,13 +37,13 @@ namespace FoodetoryMenuGeorgian.Models.Bar
             Cocktailandmilkshake.Add(new Product { Name = "Avocado and pistachio", NameArm = "Ավոկադո և պիստակ", NameRus = "Авокадо и фисташки", Price = "1450", PicPath = "/Resources/Bar/avocado and pistachio.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Avocado, ginger and orange", NameArm = "Ավոկադո, կոճապղպեղ և նարինջ", NameRus = "Авокадо, имбирь и апельсин", Price = "1200", PicPath = "/Resources/Bar/avocado, ginger, orance.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Avocado, flax and yogurt", NameArm = "Ավոկադո, կտավատ և յոգուրտ", NameRus = "Авокадо, лен и йогурт", Price = "900", PicPath = "/Resources/Bar/avcado, flax, yogurt.jpg" });
-            Cocktailandmilkshake.Add(new Product { Name = "Banana and coffee", NameArm = "Բանան և սուրճ", NameRus = "Банан и кофе", Price = "750", PicPath = "/Resources/Bar/banana and baunti milkshake.jpg" });
+            Cocktailandmilkshake.Add(new Product { Name = "Banana and coffee", NameArm = "Բանան և սուրճ", NameRus = "Банан и кофе", Price = "750", PicPath = "/Resources/Bar/banana and coffee.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Banana and nutella", NameArm = "Բանան և նուտելլա", NameRus = "Банан и нутелла", Price = "1150", PicPath = "/Resources/Bar/banana and nutella.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Strawberry and ice-cream", NameArm = "Ելակ և պաղպաղակ", NameRus = "Клубника и мороженое", Price = "1150", PicPath = "/Resources/Bar/strawberry and ice cream milkshake.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Strawberry, banana and ice-cream", NameArm = "Ելակ, բանան և պաղպաղակ", NameRus = "Клубника, банан и мороженое", Price = "1200", PicPath = "/Resources/Bar/strawberry, banana, ice cream.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Berries", NameArm = "Հատապտղային", NameRus = "Ягодный", Price = "1200", PicPath = "/Resources/Bar/berries milkshake.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Banana and condensed milk", NameArm = "Բանան և խտացրած կաթ", NameRus = "Банан и сгущенное молоко", Price = "1200", PicPath = "/Resources/Bar/banana and condensed milk milkshake.jpg" });
-            Cocktailandmilkshake.Add(new Product { Name = "Banana and baunti", NameArm = "Բանան և բաունտի", NameRus = "Банан и баунти", Price = "1200", PicPath = "/Resources/Bar/no_image.jpg" });
+            Cocktailandmilkshake.Add(new Product { Name = "Banana and baunti", NameArm = "Բանան և բաունտի", NameRus = "Банан и баунти", Price = "1200", PicPath = "/Resources/Bar/banana and baunti milkshake.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Cocktail Freshness", NameArm = "Կոկտեյլ «Թարմություն»", NameRus = "Коктейль Свежесть", Price = "850", PicPath = "/Resources/Bar/cocktail freshness.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Banana, ice-cream and milk", NameArm = "Բանան, պաղպաղակ և կաթ", NameRus = "Банан, мороженое и молоко", Price = "700", PicPath = "/Resources/Bar/banana, ice cream and milk.jpg" });
             Cocktailandmilkshake.Add(new Product { Name = "Chocolate milkshake", NameArm = "Շոկոլադե միլքշեյք", NameRus = "Шоколадный милкшейк", Price = "800", PicPath = "/Resources/Bar/chocolate milkshake.jpg" });
