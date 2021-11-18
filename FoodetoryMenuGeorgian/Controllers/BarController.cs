@@ -10,43 +10,52 @@ namespace FoodetoryMenuGeorgian.Controllers
     public class BarController : Controller
     {
         [Route("/Bar")]
-        public IActionResult Bar()
+        public IActionResult Bar(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             BarViewModel barViewModel = new BarViewModel() { categories = new Categories()};
+            barViewModel.isQR = homeViewModel.isQR;
             return View("bar", barViewModel);
         }
         [Route("/Bar_arm")]
-        public IActionResult BarArm()
+        public IActionResult BarArm(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             BarViewModel barViewModel = new BarViewModel() { categories = new Categories() };
+            barViewModel.isQR = homeViewModel.isQR;
             return View("bar_arm", barViewModel);
         }
         [Route("/Bar_rus")]
-        public IActionResult BarRus()
+        public IActionResult BarRus(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             BarViewModel barViewModel = new BarViewModel() { categories = new Categories() };
+            barViewModel.isQR = homeViewModel.isQR;
             return View("bar_rus", barViewModel);
         }
         public IActionResult Categorie(BarViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
-            return View("categorie", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
+            var model = barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault();
+            model.isQR = barViewModel.isQR;
+            return View("categorie", model);
         }
         public IActionResult CategorieArm(BarViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
-            return View("categorie_arm", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
+            var model = barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault();
+            model.isQR = barViewModel.isQR;
+            return View("categorie_arm", model);
         }
         public IActionResult CategorieRus(BarViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
-            return View("categorie_rus", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
+            var model = barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault();
+            model.isQR = barViewModel.isQR;
+            return View("categorie_rus", model);
         }
         public IActionResult Product(FoodetoryMenuGeorgian.Models.SushiViewModel sushiViewModel)
         {
@@ -75,7 +84,6 @@ namespace FoodetoryMenuGeorgian.Controllers
                                                                                                                                                    x.NameArm == sushiViewModel.NameAndPrice ||
                                                                                                                                                    x.NameRus == sushiViewModel.NameAndPrice).FirstOrDefault().NameRus;
             }
-            
             return View("product",sushiViewModel);
         }
         public IActionResult ProductArm(FoodetoryMenuGeorgian.Models.SushiViewModel sushiViewModel)

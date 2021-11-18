@@ -9,5 +9,6 @@ namespace FoodetoryMenuGeorgian.Models.Italy
     {
         public Categories categories { get; set; }
         public string categorieName { get; set; }
+        public bool isQR { get; set; }
     }
 }

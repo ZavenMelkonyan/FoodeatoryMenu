@@ -10,43 +10,52 @@ namespace FoodetoryMenuGeorgian.Controllers
     public class GeorgianController : Controller
     {
         [Route("/Georgian")]
-        public IActionResult Georgian()
+        public IActionResult Georgian(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories()};
+            barViewModel.isQR = homeViewModel.isQR;
             return View("georgian", barViewModel);
         }
         [Route("/Georgian_arm")]
-        public IActionResult GeorgianArm()
+        public IActionResult GeorgianArm(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories() };
+            barViewModel.isQR = homeViewModel.isQR;
             return View("georgian_arm", barViewModel);
         }
         [Route("/Georgian_rus")]
-        public IActionResult GeorgianRus()
+        public IActionResult GeorgianRus(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             GeorgianViewModel barViewModel = new GeorgianViewModel() { categories = new Categories() };
+            barViewModel.isQR = homeViewModel.isQR;
             return View("georgian_rus", barViewModel);
         }
         public IActionResult Categorie(GeorgianViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
-            return View("categorie", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
+            var model = barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault();
+            model.isQR = barViewModel.isQR;
+            return View("categorie",model);
         }
         public IActionResult CategorieArm(GeorgianViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
-            return View("categorie_arm", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
+            var model = barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault();
+            model.isQR = barViewModel.isQR;
+            return View("categorie_arm", model);
         }
         public IActionResult CategorieRus(GeorgianViewModel barViewModel)
         {
             barViewModel.categories = new Categories();
-            return View("categorie_rus", barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
+            var model = barViewModel.categories.categories.Where(x => x.Name == barViewModel.categorieName ||
                                                                                    x.NameArm == barViewModel.categorieName ||
-                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == barViewModel.categorieName).FirstOrDefault();
+            model.isQR = barViewModel.isQR;
+            return View("categorie_rus", model);
         }
         public IActionResult Product(FoodetoryMenuGeorgian.Models.SushiViewModel sushiViewModel)
         {

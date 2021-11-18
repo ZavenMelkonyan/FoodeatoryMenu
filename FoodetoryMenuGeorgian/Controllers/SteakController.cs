@@ -10,43 +10,52 @@ namespace FoodetoryMenuGeorgian.Controllers
     public class SteakController : Controller
     {
         [Route("/Steak")]
-        public IActionResult Steak()
+        public IActionResult Steak(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             SteakViewModel steakViewModel = new SteakViewModel() { categories = new Categories()};
+            steakViewModel.isQR = homeViewModel.isQR;
             return View("steak", steakViewModel);
         }
         [Route("/Steak_arm")]
-        public IActionResult SteakArm()
+        public IActionResult SteakArm(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             SteakViewModel steakViewModel = new SteakViewModel() { categories = new Categories() };
+            steakViewModel.isQR = homeViewModel.isQR;
             return View("steak_arm", steakViewModel);
         }
         [Route("/Steak_rus")]
-        public IActionResult SteakRus()
+        public IActionResult SteakRus(FoodetoryMenuGeorgian.Models.HomeViewModel homeViewModel)
         {
             SteakViewModel steakViewModel = new SteakViewModel() { categories = new Categories() };
+            steakViewModel.isQR = homeViewModel.isQR;
             return View("steak_rus", steakViewModel);
         }
         public IActionResult Categorie(SteakViewModel steakViewModel)
         {
             steakViewModel.categories = new Categories();
-            return View("categorie", steakViewModel.categories.categories.Where(x => x.Name == steakViewModel.categorieName ||
+            var model = steakViewModel.categories.categories.Where(x => x.Name == steakViewModel.categorieName ||
                                                                                    x.NameArm == steakViewModel.categorieName ||
-                                                                                   x.NameRus == steakViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == steakViewModel.categorieName).FirstOrDefault();
+            model.isQR = steakViewModel.isQR;
+            return View("categorie", model);
         }
         public IActionResult CategorieArm(SteakViewModel steakViewModel)
         {
             steakViewModel.categories = new Categories();
-            return View("categorie_arm", steakViewModel.categories.categories.Where(x => x.Name == steakViewModel.categorieName ||
+            var model = steakViewModel.categories.categories.Where(x => x.Name == steakViewModel.categorieName ||
                                                                                    x.NameArm == steakViewModel.categorieName ||
-                                                                                   x.NameRus == steakViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == steakViewModel.categorieName).FirstOrDefault();
+            model.isQR = steakViewModel.isQR;
+            return View("categorie_arm", model);
         }
         public IActionResult CategorieRus(SteakViewModel steakViewModel)
         {
             steakViewModel.categories = new Categories();
-            return View("categorie_rus", steakViewModel.categories.categories.Where(x => x.Name == steakViewModel.categorieName ||
+            var model = steakViewModel.categories.categories.Where(x => x.Name == steakViewModel.categorieName ||
                                                                                    x.NameArm == steakViewModel.categorieName ||
-                                                                                   x.NameRus == steakViewModel.categorieName).FirstOrDefault());
+                                                                                   x.NameRus == steakViewModel.categorieName).FirstOrDefault();
+            model.isQR = steakViewModel.isQR;
+            return View("categorie_rus", model);
         }
         public IActionResult Product(FoodetoryMenuGeorgian.Models.SushiViewModel sushiViewModel)
         {

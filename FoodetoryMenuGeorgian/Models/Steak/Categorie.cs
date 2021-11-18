@@ -11,5 +11,6 @@ namespace FoodetoryMenuGeorgian.Models.Steak
         public string NameArm { get; set; }
         public string NameRus { get; set; }
         public List<Product> Products { get; set; }
+        public bool isQR { get; set; }
     }
 }

@@ -12,5 +12,6 @@ namespace FoodetoryMenuGeorgian.Models
         public string Description { get; set; }
         public string MenuName { get; set; }
         public string Lang { get; set; }
+        public bool isQR { get; set; }
     }
 }
