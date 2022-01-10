@@ -12,5 +12,6 @@ namespace FoodetoryMenuGeorgian.Models.Georgian
         public string NameRus { get; set; }
         public List<Product> Products { get; set; }
         public bool isQR { get; set; }
+        public string CategoriePic { get; set; }
     }
 }

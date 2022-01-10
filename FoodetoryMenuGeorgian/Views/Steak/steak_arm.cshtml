@@ -23,7 +23,7 @@
     </a>
     @if (Model.isQR)
     {
-        <a href="@Url.Action("IndexArm","Home", new HomeViewModel {isQR=Model.isQR })">
+        <a href="@Url.Action("BarekamutyunArm","Location", new HomeViewModel {isQR=Model.isQR })">
             <img id="btn_back" class="btn" src="/Resources/1024px-Back_Arrow.svg.png" height="90" width="90" alt="clear" />
         </a>
     }
@@ -36,7 +36,7 @@
                         Model.categorieName = Model.categories.categories[i].NameArm;
                         <a href="@Url.Action("CategorieArm","Steak",Model)">
                             <h1>@Model.categories.categories[i].NameArm</h1>
-                            <img class="image" src="@Model.categories.categories[i].Products[0].PicPath" alt="1">
+                            <img class="image" src="@Model.categories.categories[i].CategoriePic" alt="1">
                         </a>
                     }
                 </li>
@@ -50,7 +50,7 @@
                         Model.categorieName = Model.categories.categories[i].NameArm;
                         <a href="@Url.Action("CategorieArm","Steak",Model)">
                             <h1>@Model.categories.categories[i].NameArm</h1>
-                            <img class="image" src="@Model.categories.categories[i].Products[0].PicPath" alt="1">
+                            <img class="image" src="@Model.categories.categories[i].CategoriePic" alt="1">
                         </a>
                     }
                 </li>
@@ -64,7 +64,7 @@
                         Model.categorieName = Model.categories.categories[i].NameArm;
                         <a href="@Url.Action("CategorieArm","Steak",Model)">
                             <h1>@Model.categories.categories[i].NameArm</h1>
-                            <img class="image" src="@Model.categories.categories[i].Products[0].PicPath" alt="1">
+                            <img class="image" src="@Model.categories.categories[i].CategoriePic" alt="1">
                         </a>
                     }
                 </li>

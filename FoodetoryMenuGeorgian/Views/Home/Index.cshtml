@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 @{
-    <img id="contol" class="btn_control" src="~/Resources/flag-of-armenia.jpg" />
+    <!--<img id="contol" class="btn_control" src="~/Resources/flag-of-armenia.jpg" />
     <a href="@Url.Action("Index","Home",new HomeViewModel {isQR = Model.isQR })">
         <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
     </a>
@@ -18,17 +18,14 @@
     </a>
     <a href="@Url.Action("IndexArm","Home",new HomeViewModel {isQR = Model.isQR })">
         <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
-    </a>
+    </a>-->
 }
 <div class="row">
     <div class="column">
         <ul style="list-style: none;">
             <li>
-                <a href="@Url.Action("Steak","Steak",new HomeViewModel {isQR = Model.isQR })">
-                    <img class="image" src="/Resources/steak burger eng.png" alt="1">
-                </a>
-                <a href="@Url.Action("Georgian","Georgian",new HomeViewModel {isQR = Model.isQR })">
-                    <img class="image" src="/Resources/georgia eng.png" alt="1">
+                <a href="@Url.Action("Barekamutyun","Location",new HomeViewModel {isQR = Model.isQR })">
+                    <img class="image" src="/Resources/barekamutyun.jpg" alt="1">
                 </a>
             </li>
         </ul>
@@ -36,11 +33,8 @@
     <div class="column">
         <ul style="list-style: none;">
             <li>
-                <a href="@Url.Action("Italy","Italy",new HomeViewModel {isQR = Model.isQR })">
-                    <img class="image" src="/Resources/italy eng.png" alt="1">
-                </a>
-                <a href="@Url.Action("Bar","Bar",new HomeViewModel {isQR = Model.isQR })">
-                    <img class="image" src="/Resources/bar eng.png" alt="1">
+                <a href="@Url.Action("Kiev","Location",new HomeViewModel {isQR = Model.isQR })">
+                    <img class="image" src="/Resources/2560px-Flag_of_Ukraine.svg.png" alt="1">
                 </a>
             </li>
         </ul>

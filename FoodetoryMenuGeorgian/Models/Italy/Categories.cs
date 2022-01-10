@@ -48,7 +48,7 @@ namespace FoodetoryMenuGeorgian.Models.Italy
             pizzas.Add(new Product { Name = "Estate in Italiano 1 piece", NameArm = "Էստատե ին իտալյանո 1 կտոր", NameRus = "Эстате ин Италиано 1 кусок", Price = "590/3540", PicPath = "/Resources/Italy/estante in italiano 1 piece.jpg", Description = "black and green olives, cherry tomatoes, bell peppers, mozzarella, feta cheese, lettuce", DescriptionArm = "սև ու կանաչ ձիթապտուղ, չերրի լոլիկ, բուլղարական պղպեղ, մոցառելլա, պանիր ֆետա, հազար", DescriptionRus = "черные и зеленые оливки, помидоры черри, болгарский перец, моцарелла, сыр фета, листья салата" });
 
 
-            categories.Add(new Categorie { Name = "Pizzas", NameArm = "Պիցցաներ", NameRus = "Пиццы", Products = pizzas });
+            categories.Add(new Categorie { Name = "Pizzas", NameArm = "Պիցցաներ", NameRus = "Пиццы", Products = pizzas, CategoriePic = "/Resources/Italy/Cover/Պիցցա.png" });
 
 
             List<Product> pastas = new List<Product>();
@@ -64,7 +64,7 @@ namespace FoodetoryMenuGeorgian.Models.Italy
             pastas.Add(new Product { Name = "Pasta Verde with pesto sauce /320 g/", NameArm = "Պաստա Վեռդե պեստո սոուսով, 320 գ", NameRus = "Паста Верде с соусом песто /320 гр./", Price = "1400", PicPath = "/Resources/Italy/Պաստա Վեռդե պեստո սոուսով.jpg", Description = "bell pepper, pumpkin, carrot, broccoli, basil, pesto sauce, cherry tomatoes", DescriptionArm = "բուլղարական պղպեղ, դդմիկ, գազար, բրոկոլի, բազիլիկ, պեստո սոուս, չերրի լոլիկ", DescriptionRus = "болгарский перец, тыква, морковь, брокколи, базилик, соус песто, помидоры черри" });
 
 
-            categories.Add(new Categorie { Name = "Pastas", NameArm = "Պաստաներ", NameRus = "Паста", Products = pastas });
+            categories.Add(new Categorie { Name = "Pastas", NameArm = "Պաստաներ", NameRus = "Паста", Products = pastas, CategoriePic = "/Resources/Italy/Cover/Պաստա.png" });
 
 
             List<Product> hotDishes = new List<Product>();
@@ -80,7 +80,7 @@ namespace FoodetoryMenuGeorgian.Models.Italy
 
 
 
-            categories.Add(new Categorie { Name = "Hot dishes", NameArm = "Տաք ուտեստներ", NameRus = "Горячие блюда", Products = hotDishes });
+            categories.Add(new Categorie { Name = "Hot dishes", NameArm = "Տաք ուտեստներ", NameRus = "Горячие блюда", Products = hotDishes, CategoriePic = "/Resources/Italy/Cover/hot dishes.png" });
 
 
 
@@ -93,11 +93,10 @@ namespace FoodetoryMenuGeorgian.Models.Italy
             soups.Add(new Product { Name = "Minestrone", NameArm = "Մինեստրոնե", NameRus = "Минестроне", Price = "650", PicPath = "/Resources/Italy/minestrone.jpg", Description = "green beans, broccoli, cheese Gran Spicco, celery, bell pepper", DescriptionArm = "կանաչ լոբի, բրոկոլի, պանիր գրան սպիկկո, նեխուր, բուլղարական պղպեղ", DescriptionRus = "зеленая фасоль, брокколи, сыр гран спико, сельдерей, болгарский перец" });
 
 
-            categories.Add(new Categorie { Name = "Soups", NameArm = "Ապուրներ", NameRus = "Супы", Products = soups });
+            categories.Add(new Categorie { Name = "Soups", NameArm = "Ապուրներ", NameRus = "Супы", Products = soups, CategoriePic = "/Resources/Italy/Cover/soups.png" });
 
             List<Product> salads = new List<Product>();
 
-            salads.Add(new Product { Name = "Gorgonzola /200g/", NameArm = "Գորգոնզոլա /200գր/", NameRus = "Горгонзола /200гр./", Price = "1350", PicPath = "/Resources/Italy/Աղցան գորգոնզոլա.jpg", Description = "spinach, mushrooms, Roquefort cheese, greens", DescriptionArm = "սպանախ,  շամպինյոն, ռոկֆոր պանիր, կանաչիներ", DescriptionRus = "шпинат, шампиньоны, сыр рокфор, зелень" });
             salads.Add(new Product { Name = "Caesar with chicken /230g/", NameArm = "Կեսար հավի մսով /230գր/ ", NameRus = "Цезарь с курицей /230 гр./", Price = "1400", PicPath = "/Resources/Italy/Աղցան կեսար հավի մսով.jpg", Description = "chicken breast, Iceberg lettuce, Romano lettuce, Caesar sauce", DescriptionArm = "այսբերգ հազար, ռոմանո,  կեսարի սոուս, հավի  կրծքամիս", DescriptionRus = "куриная грудка, салат айсберг, салат романо, соус цезарь " });
             salads.Add(new Product { Name = "Caesar with seafood /240g/", NameArm = "Կեսար ծովամթերքով/240գր/  ", NameRus = "Цезарь с морепродуктами /240 гр./", Price = "1700", PicPath = "/Resources/Italy/Աղցան Կեսար ծովամթերքով.jpg", Description = "seafood, Iceberg lettuce, Romano lettuce, Caesar sauce", DescriptionArm = "այսբերգ հազար, ռոմանո,  կեսարի սոուս, ծովամթերք", DescriptionRus = "морепродукты, салат айсберг, салат романо, соус цезарь " });
             salads.Add(new Product { Name = "Caprese with Pesto sauce /200g/", NameArm = "Կապրեզե պեստո սոուսով /200գր/", NameRus = "Капрезе с соусом Песто /200 гр./", Price = "1200", PicPath = "/Resources/Italy/Աղցան կապրեզե.jpg", Description = "milk mozzarella, tomatoes, pesto sauce", DescriptionArm = "կաթնային մոցառելլա, լոլիկ, պեստո սոուս", DescriptionRus = "молочная моцарелла, помидоры, соус песто" });
@@ -107,11 +106,10 @@ namespace FoodetoryMenuGeorgian.Models.Italy
             salads.Add(new Product { Name = "Di Polo Arosto", NameArm = "Դի Պոլո Առոստո", NameRus = "Аросто ди Поло", Price = "1800", PicPath = "/Resources/Italy/Դի պոլո արոստո.jpg", Description = "chicken breast, spinach, puff pastry, couscous, quail egg", DescriptionArm = "հավի կրծքամիս, սպանախ, շերտավոր խմոր, կուս կուս, լորի ձու", DescriptionRus = "куриная грудка, шпинат, слоеное тесто, кускус, перепелиные яйца" });
             salads.Add(new Product { Name = "Vitello", NameArm = "Վիտելլո", NameRus = "Вителло", Price = "2400", PicPath = "/Resources/Italy/Վիտելլո.jpg", Description = "beef, puff pastry, ginger, arugula, spinach", DescriptionArm = "տավարի փափկամիս, շերտավոր խմոր, իմբիր, ռուկոլա, սպանախ", DescriptionRus = "филе говядины, слоеное тесто, имбирь, руккола, шпинат" });
             salads.Add(new Product { Name = "Summer Caprese Farro", NameArm = "Ամառային կապրեզե Ֆառռո", NameRus = "Летний Капрезе Фарро", Price = "1900", PicPath = "/Resources/Italy/Summer Caprese Farro.jpg", Description = "Feta cheese, cherry tomatoes, lettuce, green olives, cucumber, basil", DescriptionArm = "Պանիր ֆետա, չերրի լոլիկ, հազար, սև և կանաչ ձիթապտուղ, վարունգ, բազիլիկ", DescriptionRus = "Сыр фета, помидоры черри, листья салата, оливки, огурец, базилик" });
-            salads.Add(new Product { Name = "Petro Dantra", NameArm = "Պետռո Դանտրա", NameRus = "Петро Дантра", Price = "2900", PicPath = "/Resources/Italy/Պետռո Դանտրա.jpg", Description = "Arugula, duck breast, white wine, cream cheese, orange, sunflower seeds, peach, honey, rosemary, mustard", DescriptionArm = "Ռուկոլա, բադի կրծքամիս, սպիտակ գինի, կրեմ պանիր, նարինջ, արևածաղկի սերմ, դեղձ, մեղր, ռոզմարի, մանանեխ", DescriptionRus = "Руккола, утиная грудка, белое вино, сливочный сыр, апельсин, семечки, персик, мед, розмарин, горчица" });
             salads.Add(new Product { Name = "Italian Couscous", NameArm = "Իտալական կուսկուս", NameRus = "Кускус по-итальянски", Price = "1200", PicPath = "/Resources/Italy/Italian kuskus.jpg", Description = "Arugula, bell pepper, cherry tomatoes, pumpkin, gran spicco cheese, green peas", DescriptionArm = "Ռուկոլա, բուլղարական պղպեղ, չերրի լոլիկ, դդմիկ, պանիր գրան սպիչո, կանաչ ոլոռ", DescriptionRus = "Руккола, болгарский перец, помидоры черри, тыква, сыр гран спико, зеленый горошек" });
 
 
-            categories.Add(new Categorie { Name = "Salads", NameArm = "Աղցաններ", NameRus = "Салаты", Products = salads });
+            categories.Add(new Categorie { Name = "Salads", NameArm = "Աղցաններ", NameRus = "Салаты", Products = salads, CategoriePic = "/Resources/Italy/Cover/salads.png" });
 
 
         }
