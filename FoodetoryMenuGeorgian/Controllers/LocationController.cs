@@ -29,5 +29,17 @@ namespace FoodetoryMenuGeorgian.Controllers
         {
             return View("kiev_eng", new HomeViewModel { isQR = isQR });
         }
+        public IActionResult RossiaMall(bool isQR)
+        {
+            return View("rossiamall", new HomeViewModel { isQR = isQR });
+        }
+        public IActionResult RossiaMallArm(bool isQR)
+        {
+            return View("rossiamall_arm", new HomeViewModel { isQR = isQR });
+        }
+        public IActionResult RossiaMallRus(bool isQR)
+        {
+            return View("rossiamall_rus", new HomeViewModel { isQR = isQR });
+        }
     }
 }

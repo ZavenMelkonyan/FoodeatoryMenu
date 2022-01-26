@@ -1,0 +1,68 @@
+﻿@model FoodetoryMenuGeorgian.Models.RossiaMall.Georgian.Categorie
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+@{
+    <img id="contol" class="btn_control" src="~/Resources/flag-of-armenia.jpg" />
+    <a href="@Url.Action("Categorie","GeorgianRM",new FoodetoryMenuGeorgian.Models.Bar.BarViewModel {categorieName = Model.Name, isQR = Model.isQR  })">
+        <img id="btn" class="btn" src="/Resources/USFLag.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("CategorieRus","GeorgianRM",new FoodetoryMenuGeorgian.Models.Bar.BarViewModel {categorieName = Model.NameRus, isQR = Model.isQR  })">
+        <img id="btn_rus" class="btn" src="/Resources/Flag-Russia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("CategorieArm","GeorgianRM",new FoodetoryMenuGeorgian.Models.Bar.BarViewModel {categorieName = Model.NameArm, isQR = Model.isQR  })">
+        <img id="btn_arm" class="btn" src="/Resources/flag-of-armenia.jpg" height="60" width="90" alt="clear" />
+    </a>
+    <a href="@Url.Action("GeorgianRus","GeorgianRM", new HomeViewModel {isQR=Model.isQR })">
+        <img id="btn_back" class="btn" src="/Resources/1024px-Back_Arrow.svg.png" height="90" width="90" alt="clear" />
+    </a>
+    <div class="row">
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    @for (int i = 0; i < Model.Products.Count; i += 3)
+                    {
+                        <a href="@Url.Action("Product","GeorgianRM",new SushiViewModel { NameAndPrice = Model.Products[i].NameRus, Src = Model.Products[i].PicPath, MenuName = Model.NameRus, Lang = "Rus", Description = Model.Products[i].DescriptionRus, isQR = Model.isQR  })">
+                            <h1>@Model.Products[i].NameRus</h1>
+                            <img class="image" src="@Model.Products[i].PicPath" alt="1">
+                        </a>
+                    }
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    @for (int i = 1; i < Model.Products.Count; i += 3)
+                    {
+                        <a href="@Url.Action("Product","GeorgianRM",new SushiViewModel { NameAndPrice = Model.Products[i].NameRus, Src = Model.Products[i].PicPath, MenuName = Model.NameRus, Lang = "Rus", Description = Model.Products[i].DescriptionRus, isQR = Model.isQR  })">
+                            <h1>@Model.Products[i].NameRus</h1>
+                            <img class="image" src="@Model.Products[i].PicPath" alt="1">
+                        </a>
+                    }
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="list-style: none;">
+                <li>
+                    @for (int i = 2; i < Model.Products.Count; i += 3)
+                    {
+                        <a href="@Url.Action("Product","GeorgianRM",new SushiViewModel { NameAndPrice = Model.Products[i].NameRus, Src = Model.Products[i].PicPath, MenuName = Model.NameRus, Lang = "Rus", Description = Model.Products[i].DescriptionRus, isQR = Model.isQR  })">
+                            <h1>@Model.Products[i].NameRus</h1>
+                            <img class="image" src="@Model.Products[i].PicPath" alt="1">
+                        </a>
+                    }
+                </li>
+            </ul>
+        </div>
+    </div>
+}
