@@ -11,7 +11,7 @@ namespace FoodetoryMenuGeorgian.Controllers
     {
         public IActionResult Barekamutyun(bool isQR)
         {
-            return View("barekamutyun",new HomeViewModel { isQR = isQR });
+            return View("barekamutyun", new HomeViewModel { isQR = isQR });
         }
         public IActionResult BarekamutyunArm(bool isQR)
         {
@@ -23,10 +23,14 @@ namespace FoodetoryMenuGeorgian.Controllers
         }
         public IActionResult Kiev(bool isQR)
         {
+            //if (isQR)
+            //return Redirect("https://artlunch.chooice.app/a/IavF-feZe");
             return View("kiev", new HomeViewModel { isQR = isQR });
         }
         public IActionResult KievEng(bool isQR)
         {
+            //if (isQR)
+            //return Redirect("https://artlunch.chooice.app/a/IavF-feZe");
             return View("kiev_eng", new HomeViewModel { isQR = isQR });
         }
         public IActionResult RossiaMall(bool isQR)
