@@ -24,14 +24,14 @@ namespace FoodetoryMenuGeorgian.Controllers
         public IActionResult Kiev(bool isQR)
         {
             //if (isQR)
-            //return Redirect("https://artlunch.chooice.app/a/IavF-feZe");
-            return View("kiev", new HomeViewModel { isQR = isQR });
+            return Redirect("https://artlunch.chooice.app/a/IavF-feZe");
+            //return View("kiev", new HomeViewModel { isQR = isQR });
         }
         public IActionResult KievEng(bool isQR)
         {
             //if (isQR)
-            //return Redirect("https://artlunch.chooice.app/a/IavF-feZe");
-            return View("kiev_eng", new HomeViewModel { isQR = isQR });
+            return Redirect("https://artlunch.chooice.app/a/IavF-feZe");
+            //return View("kiev_eng", new HomeViewModel { isQR = isQR });
         }
         public IActionResult RossiaMall(bool isQR)
         {
